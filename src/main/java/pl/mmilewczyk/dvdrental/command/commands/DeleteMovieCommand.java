@@ -1,0 +1,13 @@
+package pl.mmilewczyk.dvdrental.command.commands;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.axonframework.modelling.command.TargetAggregateIdentifier;
+
+@Data
+@AllArgsConstructor
+public class DeleteMovieCommand {
+
+    @TargetAggregateIdentifier
+    private final String movieId;
+}
